@@ -7,6 +7,7 @@ import uuid
 
 
 def fuseCoeff(cooef1, cooef2, method):
+    print("HELLO")
     if (method == 'mean'):
         cooef = (cooef1 + cooef2) / 2
     elif (method == 'min'):

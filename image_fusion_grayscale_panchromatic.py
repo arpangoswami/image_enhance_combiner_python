@@ -7,7 +7,6 @@ import uuid
 
 
 def fuseCoeff(cooef1, cooef2, method):
-    print("HELLO")
     if (method == 'mean'):
         cooef = (cooef1 + cooef2) / 2
     elif (method == 'min'):
@@ -59,7 +58,7 @@ def waveletFusion(blur, grayscale):
 
 
 # Reading and showing image
-path = sys.path[0]+"\\..\\resources\\Photos\\park.jpg"
+path = sys.path[0]+"/resources/Photos/park.jpg"
 imgPark = cv.imread(path)
 cv.imshow("Park-window", imgPark)
 
@@ -82,9 +81,9 @@ fusedImage = cv.merge([blueFused, greenFused, redFused])
 resized = cv.resize(fusedImage, (imgPark.shape[1], imgPark.shape[0]))
 cv.imshow('Resized Fused', resized)
 
-kernel = np.array([[0, -1, 0],
-                   [-1, 5, -1],
-                   [0, -1, 0]])
+kernel = np.array([[-1, -1, -1],
+                   [-1, 9, -1],
+                   [-1, -1, -1]])
 image_sharp = cv.filter2D(src=fusedImage, ddepth=-1, kernel=kernel)
 resized_sharpened = cv.resize(
     image_sharp, (imgPark.shape[1], imgPark.shape[0]))

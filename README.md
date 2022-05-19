@@ -7,6 +7,7 @@ Combines a high resolution panchromatic image(lacks the chromatic data) with a l
 <ul>
 <li> Download the conda distribution, from <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" >Here</a> and follow the steps to install the conda distribution successfully</li>
 <li>After downloading the distribution activate a conda virtual environment using the command create a new virtual environment using the command conda create -n envname python=x.x anaconda </li>
+<li>Activate the virtualenv</li>
 <li> Clone the project inside the folder you want to recreate it</li>
 <li> Download the necessary requirements by using the command pip install -r requirements.txt</li>
 <li>Run the  _image_fusion_grayscale_panchromatic.py_ script. It will generate grayscale, blurred and fused images of a park</li>

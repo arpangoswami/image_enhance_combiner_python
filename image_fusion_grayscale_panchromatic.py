@@ -22,11 +22,7 @@ FUSION_METHOD = 'mean'  # Can be 'min' || 'max || anything you choose according 
 
 
 def wavelet_fusion(blur, grayscale):
-    print(blur.shape)
-    print(grayscale.shape)
     grayscale = cv.resize(grayscale, (blur.shape[1], blur.shape[0]))
-    print(blur.shape)
-    print(grayscale.shape)
     # Fusion algo
     # First: Do wavelet transform on each image
     wavelet = 'db1'
